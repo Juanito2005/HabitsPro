@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, date
 
 def pedir_entero_rango(mensaje: str, minimo: int, maximo: int) -> int:
     while True:
@@ -23,16 +23,26 @@ def pedir_texto_obligatorio(mensaje: str, max_longitud: int = None) -> str:
         return texto
 
 def pedir_fecha_opcional(mensaje: str) -> str:
-
+    # pedimos la fecha validando que no pongan años loquisimos ni viajen al futuro
     while True:
         entrada = input(mensaje).strip()
         if not entrada:
             return ""
         try:
             fecha_validada = datetime.strptime(entrada, "%Y-%m-%d").date()
+            hoy = date.today()
+            
+            # bloqueamos registros que no tienen sentido para la app
+            if fecha_validada.year < 2023:
+                print("Error: La fecha es demasiado antigua, bro.")
+                continue
+            if fecha_validada > hoy:
+                print("Error: No puedes registrar fechas en el futuro.")
+                continue
+                
             return fecha_validada.strftime("%Y-%m-%d")
         except ValueError:
-            print("Error: Formato de fecha incorrecto. Usa YYYY-MM-DD.")
+            print("Error: Formato incorrecto. Usa YYYY-MM-DD.")
 
 def pedir_etiquetas(mensaje: str) -> list:
     entrada = input(mensaje)

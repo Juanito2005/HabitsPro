@@ -7,6 +7,12 @@ Aplicación de consola desarrollada en Python puro (sin librerías externas) par
 **Sin persistencia: al salir se pierde todo.**
 El sistema funciona con un modelo de datos en memoria. Si el programa se cierra, se pierde toda la información generada en esa sesión.
 
+## Casos de Prueba
+
+Profe como soy un alumno considerado, le pedí a la IA un arhcivo que ejecute los 9 casos de prueba automaticamente de forma que no tenga que hacerlo a mano :)
+
+**Para correr estos test solo escriba en la terminal: python3 test_app.py -v**
+
 ## Cómo ejecutar
 
 El proyecto no requiere gestores de dependencias ni entornos virtuales complejos. Solo necesitas tener Python 3.10 o superior instalado.
