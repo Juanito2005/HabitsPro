@@ -60,13 +60,13 @@ class TestProductividadCLI(unittest.TestCase):
     # Caso 6: Hábito diario no se duplica
     @patch('builtins.input', side_effect=[
         "1",           # ID del habito
-        "2026-10-10"   # Fecha manual
+        "2024-10-10"   # Fecha manual
     ])
     def test_habito_diario_no_duplica(self, mock_input):
         memory_db.habitos.append({
-            "id": 1, 
-            "frecuencia": "diaria", 
-            "registros": ["2026-10-10"] # ya tiene esta fecha
+            "id": 1,
+            "frecuencia": "diaria",
+            "registros": ["2024-10-10"] # ya tiene esta fecha
         })
         
         marcar_habito()
