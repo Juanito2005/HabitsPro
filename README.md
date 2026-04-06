@@ -11,7 +11,7 @@ El sistema funciona con un modelo de datos en memoria. Si el programa se cierra,
 
 El proyecto no requiere gestores de dependencias ni entornos virtuales complejos. Solo necesitas tener Python 3.10 o superior instalado.
 
-Abre tu terminal en la carpeta raíz del proyecto y ejecuta: python3 main.py
+Abre tu terminal en la carpeta raíz del proyecto y ejecuta: **python3 main.py**
 
 Menús disponibles
 La aplicación cuenta con una navegación clara mediante menús y submenús numerados:
